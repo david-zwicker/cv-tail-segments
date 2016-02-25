@@ -27,10 +27,10 @@ from video.analysis.active_contour import ActiveContour
 
 from video import debug  # @UnusedImport
 
-from .tail import Tail
-from .kymograph import Kymograph, KymographAligner, KymographPlotter
-from .parameters import parameters_tracking, parameters_tracking_special
-from .annotation import TackingAnnotations, SegmentPicker
+from tail_segments.tail import Tail
+from tail_segments.kymograph import Kymograph, KymographAligner, KymographPlotter
+from tail_segments.parameters import parameters_tracking, parameters_tracking_special
+from tail_segments.annotation import TackingAnnotations, SegmentPicker
 
 
 
