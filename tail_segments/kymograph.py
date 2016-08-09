@@ -14,7 +14,7 @@ import cv2
 import matplotlib.pyplot as plt
 from matplotlib import patches, widgets, ticker
 
-from utils import graphics
+from utils.plotting import backend
 
 from video import debug  # @UnusedImport
 
@@ -220,7 +220,7 @@ class KymographAligner(object):
         self._ax_points = None
         
         # create the widget for selecting the range
-        useblit = graphics.backend_supports_blitting()
+        useblit = backend.supports_blitting()
         self.selector = \
             widgets.RectangleSelector(self.ax, self.select_callback,
                                       drawtype='box',
@@ -392,7 +392,7 @@ class KymographPlotter(object):
     def measure_lines(self):
         """ shows an interface for measuring lines """
         # create the widget for selecting the range
-        useblit = graphics.backend_supports_blitting()
+        useblit = backend.supports_blitting()
         self.selector = \
             widgets.RectangleSelector(self.ax, self.select_callback,
                                       drawtype='line', lineprops=self.lineprops,

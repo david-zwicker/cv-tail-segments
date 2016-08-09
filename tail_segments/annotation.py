@@ -16,7 +16,7 @@ from shapely import geometry
 import matplotlib.pyplot as plt
 from matplotlib import widgets
 
-from utils import graphics
+from utils.plotting import backend
 
 
 
@@ -128,7 +128,7 @@ class SegmentPicker(object):
                 
                 
         # drawtype is 'box' or 'line' or 'none'
-        useblit = graphics.backend_supports_blitting()
+        useblit = backend.supports_blitting()
         self.selectors = [
             widgets.RectangleSelector(ax, self.select_callback,
                                       drawtype='line',

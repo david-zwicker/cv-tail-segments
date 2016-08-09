@@ -18,7 +18,7 @@ import cv2
 from scipy import interpolate, spatial
 from shapely import geometry
 
-from utils.cache import cached_property
+from utils.data_structures.cache import cached_property
 from utils.misc import display_progress
 from video.io import VideoFile, VideoComposer, ImageWindow
 from video.filters import FilterMonochrome, FilterResize
